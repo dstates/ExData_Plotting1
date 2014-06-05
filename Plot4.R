@@ -26,7 +26,7 @@ plot2 <- function() {
     if (!exists("hpc_data"))
         stop("`hpc_data` missing, please run loadData() to load it")
     with(hpc_data,
-         plot(datetime, Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)"
+         plot(datetime, Global_active_power, type="l", xlab="", ylab="Global Active Power"
          )
     )
 }
