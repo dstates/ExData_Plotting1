@@ -15,7 +15,7 @@ loadData <- function() {
                                           "Sub_metering_2", "Sub_metering_3"),
                             na.strings = "?"
     )
-    # convert Date and Time fields into Date() class objects
+    # convert Date and Time fields into POSIXlt() class objects
     hpc_data$datetime <<- with(hpc_data, strptime(paste(Date, Time), "%d/%m/%Y %H:%M:%S"))
     message("data exported into your environment as `hpc_data`")
     invisible(0)
